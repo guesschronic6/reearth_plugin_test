@@ -6,3 +6,10 @@ extensions:
     type: block
     visualizer: cesium
     title: Map Block
+    schema:
+      groups:
+        - id: default
+          fields:
+            - id: location
+              type: latlng
+              title: Location
