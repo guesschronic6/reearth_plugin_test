@@ -14,6 +14,7 @@ const html = `
     const marker = L.marker();
 
     const cb = (block) => {
+
       if (block && block.property && block.property.default && block.property.default.location) {
         console.log("cb block:");
         console.log(block);
@@ -27,7 +28,7 @@ const html = `
         marker.remove();
       }
       parent.postMessage("updated", "*");
-      console.log(parent)
+
     };
 
     addEventListener("message", e => {
@@ -42,9 +43,9 @@ const html = `
 `;
 reearth.ui.show(html);
 reearth.on("update", () => {
-  reearth.ui.postMessage(reearth.block);
   console.log(`reearth.onUpdate`);
   console.log(reearth.block);
+  reearth.ui.postMessage(reearth.block);
 });
 reearth.on("message", (msg) => {
   console.log("message received:", msg);
