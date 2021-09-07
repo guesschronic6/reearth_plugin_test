@@ -27,6 +27,7 @@ const html = `
         marker.remove();
       }
       parent.postMessage("updated", "*");
+      console.log(parent)
     };
 
     addEventListener("message", e => {
@@ -42,7 +43,8 @@ const html = `
 reearth.ui.show(html);
 reearth.on("update", () => {
   reearth.ui.postMessage(reearth.block);
-  console.log(`reearth.onUpdate(${reearth.block})`);
+  console.log(`reearth.onUpdate`);
+  console.log(reearth.block);
 });
 reearth.on("message", (msg) => {
   console.log("message received:", msg);
