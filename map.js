@@ -2,7 +2,7 @@ const html = `
 <div
  style="display:flex;padding:1rem;align-content:center;justify-content:center;"
 >
-  <h6 style="font-family:Arial;font-weight:bold;color:#FFFFFF">Hello World</h6>
+  <h6 style="font-family:Arial;font-weight:bold;color:#FFFFFF;">Hello World</h6>
 </div>
 `;
 
