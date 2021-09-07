@@ -5,7 +5,7 @@ const html = `
 <script>
   document.getElementById("l").addEventListener("load", () => {
 
-    console.log(JSON.stringify(L))
+    console.log(${JSON.stringify(L)});
     const map = L.map("map").setView([0, 0], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -13,9 +13,9 @@ const html = `
     const marker = L.marker();
 
     const cb = (block) => {
-      console.log("cb block:");
-      console.log(${JSON.stringify(block)});
       if (block && block.property && block.property.default && block.property.default.location) {
+        console.log("cb block:");
+        console.log(${JSON.stringify(block)});
         const latlng = [
           block.property.default.location.lat,
           block.property.default.location.lng
@@ -41,6 +41,7 @@ const html = `
 reearth.ui.show(html);
 reearth.on("update", () => {
   reearth.ui.postMessage(reearth.block);
+  console.log(`reearth.onUpdate(${reearth.block})`);
 });
 reearth.on("message", (msg) => {
   console.log("message received:", msg);
