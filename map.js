@@ -32,7 +32,7 @@ const html = `
     addEventListener("message", e => {
       if (e.source !== parent) return;
       console.log("EventListener message:");
-      console.log(${JSON.stringify(e.data)});
+      console.log(e);
       cb(e.data);
     });
     cb(${JSON.stringify(reearth.block)});
