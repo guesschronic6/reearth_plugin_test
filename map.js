@@ -16,7 +16,7 @@ const html = `
     const cb = (block) => {
       if (block && block.property && block.property.default && block.property.default.location) {
         console.log("cb block:");
-        console.log(${JSON.stringify(block)});
+        console.log(block);
         const latlng = [
           block.property.default.location.lat,
           block.property.default.location.lng
