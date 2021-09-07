@@ -2,7 +2,7 @@ id: reearth-plugin-test-nec
 title: Test Plug-in NEC
 version: 1.0.0
 extensions:
-  - id: robot_controller
+  - id: map
     type: block
     visualizer: cesium
     title: Map Block
