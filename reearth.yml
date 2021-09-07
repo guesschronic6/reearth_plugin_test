@@ -1,15 +1,3 @@
 id: reearth-plugin-test-nec
-title: Test Plug-in NEC
+title: Test Plug-in NEC w/0 Extension
 version: 1.0.0
-extensions:
-  - id: map
-    type: block
-    visualizer: cesium
-    title: Map Block
-    schema:
-      groups:
-        - id: default
-          fields:
-            - id: location
-              type: latlng
-              title: Location
