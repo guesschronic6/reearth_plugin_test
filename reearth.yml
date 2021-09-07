@@ -4,7 +4,7 @@ version: 1.0.0
 extensions:
   - id: map
     type: block
-    visualizer: cesium
+    visualizer: my_value
     title: Map Block
     schema:
       groups:
