@@ -1,11 +1,43 @@
 const html = `
-<div
- style="display:flex;padding:1rem;align-content:center;justify-content:center;"
->
-  <h6 style="font-family:Arial;font-weight:bold;color:#FFFFFF;">Hello World</h6>
-</div>
-`;
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script id="l" src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<div id="map" style="width: 100%; height: 300px;"></div>
+<script>
+  document.getElementById("l").addEventListener("load", () => {
 
+    console.log(JSON.stringify(L))
+    const map = L.map("map").setView([0, 0], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    const marker = L.marker();
+
+    const cb = (block) => {
+      console.log("cb block:");
+      console.log(${JSON.stringify(block)});
+      if (block && block.property && block.property.default && block.property.default.location) {
+        const latlng = [
+          block.property.default.location.lat,
+          block.property.default.location.lng
+        ];
+        map.setView(latlng);
+        marker.setLatLng(latlng).addTo(map);
+      } else {
+        marker.remove();
+      }
+      parent.postMessage("updated", "*");
+    };
+
+    addEventListener("message", e => {
+      if (e.source !== parent) return;
+      console.log("EventListener message:");
+      console.log(${JSON.stringify(e.data)});
+      cb(e.data);
+    });
+    cb(${JSON.stringify(reearth.block)});
+  });
+</script>
+`;
 reearth.ui.show(html);
 reearth.on("update", () => {
   reearth.ui.postMessage(reearth.block);
