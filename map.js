@@ -14,7 +14,7 @@ const html = `
 
 reearth.ui.show(html);
 reearth.on("update", () => {
-  reearth.ui.postMessage(reearth.block);
+  reearth.ui.postMessage(reearth.block_second);
 });
 reearth.on("message", (msg) => {
   console.log("message received:", msg);

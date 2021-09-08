@@ -3,7 +3,7 @@ title: Plug-In Chng Type
 version: 1.0.0
 extensions:
   - id: map
-    type: controller
+    type: block_second
     visualizer: cesium
     title: Map Block
     schema:
