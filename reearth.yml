@@ -9,6 +9,7 @@ extensions:
     schema:
       groups:
         - id: default
+          title: Map Block
           fields:
             - id: location
               type: latlng
