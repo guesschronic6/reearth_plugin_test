@@ -1,5 +1,5 @@
 id: reearth-plugin-test-nec
-title: Test Plug-in NEC
+title: Tst Schm TitleName
 version: 1.0.0
 extensions:
   - id: map
@@ -9,8 +9,8 @@ extensions:
     schema:
       groups:
         - id: default
-          title: Leaflet Title
-          name: Leaflet Name
+          title: Test Title
+          name: Test Name
           fields:
             - id: location
               type: latlng
