@@ -1,5 +1,5 @@
 id: reearth-plugin-test-nec
-title: Test Add Fields
+title: Add Fields wLogging
 version: 1.0.0
 extensions:
   - id: map

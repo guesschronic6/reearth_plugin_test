@@ -8,6 +8,7 @@ const html = `
 
 reearth.ui.show(html);
 reearth.on("update", () => {
+  console.log(reearth.block);
   reearth.ui.postMessage(reearth.block);
 });
 reearth.on("message", (msg) => {
