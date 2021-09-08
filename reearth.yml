@@ -14,10 +14,9 @@ extensions:
             - id: location
               type: latlng
               title: Location
-      groups:
         - id: not_default
           title: Group 2
           fields:
-            - id: location_2
+            - id: location
               type: latlng
               title: Location
