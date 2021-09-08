@@ -4,6 +4,12 @@ const html = `
 >
   <h6 style="font-family:Arial;font-weight:bold;color:#FFFFFF;">Hello World</h6>
 </div>
+<script>
+  addEventListener("message", e=>{
+    if(e.source !== parent) return;
+    console.log(e.data);
+  })
+</script>
 `;
 
 reearth.ui.show(html);
