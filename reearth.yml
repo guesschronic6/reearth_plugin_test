@@ -9,6 +9,8 @@ extensions:
     schema:
       groups:
         - id: default
+          title: Leaflet Title
+          name: Leaflet Name
           fields:
             - id: location
               type: latlng
