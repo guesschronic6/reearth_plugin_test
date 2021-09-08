@@ -14,3 +14,15 @@ extensions:
             - id: location
               type: latlng
               title: Location
+  - id: controller
+    type: block
+    visualizer: cesium
+    title: Map Block
+    schema:
+      groups:
+        - id: default
+          title: Map Block
+          fields:
+            - id: location
+              type: latlng
+              title: Location
