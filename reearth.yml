@@ -5,7 +5,6 @@ extensions:
   - id: map
     type: block
     visualizer: cesium
-    title: Robot Controller
     schema:
       groups:
         - id: default
