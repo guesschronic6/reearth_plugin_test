@@ -1,5 +1,5 @@
 id: reearth-plugin-test-nec
-title: Test Plug-in NEC
+title: Fields Type Test
 version: 1.0.0
 extensions:
   - id: map
@@ -14,3 +14,9 @@ extensions:
             - id: location
               type: latlng
               title: Location
+            - id: height
+              type: height
+              title: Height Test
+            - id: img_url
+              type: imgurl
+              title: Image Url Test
