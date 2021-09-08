@@ -34,7 +34,7 @@ const html = `
     addEventListener("message", e => {
       if (e.source !== parent) return;
       console.log("EventListener message:");
-      console.log(e);
+      console.log(e.data);
       cb(e.data);
     });
     cb(${JSON.stringify(reearth.block)});
