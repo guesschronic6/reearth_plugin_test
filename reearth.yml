@@ -1,5 +1,5 @@
 id: reearth-plugin-test-nec
-title: Test Plug-in NEC
+title: Test Add Fields
 version: 1.0.0
 extensions:
   - id: map
@@ -9,7 +9,11 @@ extensions:
     schema:
       groups:
         - id: default
+          title: Properties
           fields:
             - id: location
               type: latlng
               title: Location
+            - id: location_part2
+              type: latlng
+              title: Location Part 2
