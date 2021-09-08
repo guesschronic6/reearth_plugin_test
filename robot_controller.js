@@ -3,6 +3,12 @@ const html = `
  style="display:flex;padding:1rem;align-content:center;justify-content:center;"
 >
   <h6 style="font-family:Arial;font-weight:bold;color:#FFFFFF;">Hello World</h6>
+
+  addEventListener("message", e=>{
+      if(e.source !== parent) return;
+      console.log(e.data);
+  });
+
 </div>
 `;
 
